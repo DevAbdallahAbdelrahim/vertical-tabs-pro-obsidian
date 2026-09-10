@@ -1,0 +1,32 @@
+@use "../abstracts/variables" as *;
+
+.vtp-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: $bg-primary;
+    user-select: none;
+    overflow: hidden;
+
+    /* Composite Layer containment for GPU 60FPS Scrolling */
+    contain: strict;
+    will-change: transform;
+}
+
+.vtp-virtual-list {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: auto;
+    padding: 4px 0;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $text-accent;
+        border-radius: 2px;
+    }
+}

@@ -1,48 +1,42 @@
 {
-	"name": "vertical-tabs",
-	"version": "0.17.7",
-	"description": "Offer an alternative view that displays open tabs vertically, allowing users to group and organize tabs for a better navigation experience.",
-	"main": "main.js",
-	"scripts": {
-		"build:dev": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs dev && cp manifest.json dist/manifest.json",
-		"build:beta": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs beta && cp manifest.json dist/manifest.json",
-		"build:production": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production && cp manifest.json dist/manifest.json",
-		"build": "npm run build:production",
-		"version": "node version-bump.mjs && git add manifest.json versions.json",
-		"version:beta": "node version-beta-bump.mjs && git add manifest.json versions.json",
-		"lint": "eslint ."
-	},
-	"keywords": [],
-	"author": "",
-	"license": "MIT",
-	"devDependencies": {
-		"@eslint/js": "^9.39.4",
-		"@types/node": "^16.11.6",
-		"@types/react": "18.3.28",
-		"@types/react-dom": "18.3.7",
-		"@types/semver": "^7.7.0",
-		"globals": "^17.6.0",
-		"esbuild": "^0.25.0",
-		"eslint": "^9.39.4",
-		"eslint-plugin-obsidianmd": "^0.4.1",
-		"esbuild-sass-plugin": "^3.3.1",
-		"jiti": "^2.6.1",
-		"obsidian": "^1.13.1",
-		"obsidian-typings": "^5.20.0",
-		"terser": "^5.43.1",
-		"tslib": "2.4.0",
-		"typescript": "^5.6.0",
-		"typescript-eslint": "^8.59.1"
-	},
-	"dependencies": {
-		"@dnd-kit/core": "^6.1.0",
-		"@dnd-kit/sortable": "^8.0.0",
-		"@dnd-kit/utilities": "^3.2.2",
-		"monkey-around": "^3.0.0",
-		"nanoid": "^5.0.9",
-		"react": "18.3.1",
-		"react-dom": "18.3.1",
-		"semver": "^7.7.2",
-		"zustand": "^4.5.4"
-	}
+  "name": "vertical-tabs-pro",
+  "version": "1.0.0",
+  "description": "High-performance context-aware vertical tabs manager with page-fault hibernation and smart nested grouping.",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "node esbuild.config.mjs production && cargo run --release --manifest-path rust-builder/Cargo.toml",
+    "typecheck": "tsc --noEmit",
+    "test": "tsc --noEmit"
+  },
+  "keywords": [
+    "obsidian",
+    "obsidian-plugin",
+    "tabs",
+    "workspace"
+  ],
+  "author": "Abdullah Khaled",
+  "license": "MIT",
+  "dependencies": {
+    "@dnd-kit/core": "^6.1.0",
+    "@dnd-kit/sortable": "^8.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "zustand": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.48",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "builtin-modules": "^3.3.0",
+    "esbuild": "^0.28.2",
+    "esbuild-sass-plugin": "^3.7.0",
+    "obsidian": "^1.5.0",
+    "sass": "^1.104.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
+  }
 }

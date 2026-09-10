@@ -1,13 +1,10 @@
 {
-	"id": "vertical-tabs",
-	"name": "Vertical Tabs",
-	"version": "0.17.7",
-	"minAppVersion": "1.8.7",
-	"description": "Offer an alternative view that displays open tabs vertically, allowing users to group and organize tabs for a better navigation experience.",
-	"author": "oxdc",
-	"authorUrl": "https://github.com/oxdc",
-	"isDesktopOnly": false,
-	"fundingUrl": {
-		"Ko-fi": "https://ko-fi.com/oxdcq"
-	}
+  "id": "vertical-tabs-pro",
+  "name": "Vertical Tabs Pro",
+  "version": "1.0.0",
+  "minAppVersion": "1.4.0",
+  "description": "Enterprise-grade vertical tabs manager with Smart Nested Grouping, Hibernation Engine, and zero-latency Virtual Rendering.",
+  "author": "AbdallahAbdelrahim",
+  "authorUrl": "https://github.com",
+  "isDesktopOnly": true
 }

@@ -1,0 +1,20 @@
+// الربط المعزّز مع متغيرات أوبسيديان لضمان التوافق مع أي ثيم (Atom One Dark, Minimal, إلخ)
+$bg-primary: var(--background-primary);
+$bg-secondary: var(--background-secondary);
+$bg-secondary-alt: var(--background-secondary-alt);
+$bg-hover: var(--background-modifier-hover);
+$bg-selected: var(
+    --nav-item-background-selected,
+    var(--background-modifier-selected)
+);
+
+$text-normal: var(--text-normal);
+$text-muted: var(--text-muted);
+$text-faint: var(--text-faint);
+$text-accent: var(--interactive-accent);
+$text-selected: var(--nav-item-color-selected, var(--text-normal));
+
+$border-color: var(--background-modifier-border);
+$radius-s: var(--radius-s, 4px);
+$radius-m: var(--radius-m, 6px);
+$font-ui-small: var(--font-ui-small, 0.88rem);

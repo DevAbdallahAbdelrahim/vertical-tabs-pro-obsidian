@@ -1,0 +1,110 @@
+@use "../abstracts/variables" as *;
+
+/* Base Node - Used for both Tabs and Groups */
+.vtp-node {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding-right: 8px;
+    /* Dynamic Horizontal Indentation for Unlimited Flat Nesting */
+    padding-left: calc(var(--vtp-indent-level, 0) * 14px + 8px);
+    cursor: pointer;
+    border-radius: $radius-s;
+    margin: 1px 4px;
+    transition:
+        background-color 0.15s ease,
+        color 0.15s ease;
+
+    &:hover {
+        background-color: $bg-hover;
+    }
+
+    &.is-active {
+        background-color: $bg-selected;
+        color: $text-selected;
+        font-weight: 600;
+    }
+}
+
+/* Group Header Component */
+.vtp-group-header {
+    @extend .vtp-node;
+    color: $text-muted;
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    .vtp-fold-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 16px;
+        height: 16px;
+        margin-right: 4px;
+        transition: transform 0.2s ease;
+
+        &.is-collapsed {
+            transform: rotate(-90deg);
+        }
+    }
+
+    .vtp-group-icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 6px;
+        color: $text-accent;
+    }
+
+    .vtp-group-title {
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .vtp-badge-count {
+        font-size: 0.75rem;
+        padding: 2px 6px;
+        border-radius: 10px;
+        background-color: $bg-secondary-alt;
+        color: $text-faint;
+    }
+}
+
+/* Tab Item Component */
+.vtp-tab-item {
+    @extend .vtp-node;
+    color: $text-normal;
+    font-size: $font-ui-small;
+
+    .vtp-tab-icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 6px;
+        flex-shrink: 0;
+    }
+
+    .vtp-tab-title {
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Hibernation Dimmed State with Snowflake Badge */
+    &.is-hibernated {
+        opacity: 0.55;
+
+        .vtp-tab-title {
+            font-style: italic;
+        }
+
+        .vtp-snowflake-badge {
+            display: inline-flex;
+            align-items: center;
+            margin-left: 4px;
+            color: $text-accent;
+            width: 14px;
+            height: 14px;
+        }
+    }
+}
