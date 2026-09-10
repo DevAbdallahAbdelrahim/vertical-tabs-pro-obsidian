@@ -1,6 +1,6 @@
 {
   "name": "vertical-tabs-pro",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "High-performance context-aware vertical tabs manager with page-fault hibernation and smart nested grouping.",
   "main": "main.js",
   "scripts": {
